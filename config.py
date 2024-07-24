@@ -13,3 +13,4 @@ data_templates = ['Plate {}X{}',
 
 n_head = 3
 n_embed = 9
+n_blocks = 10

@@ -12,12 +12,11 @@ class SelfAttention(nn.Module):
         self.c_attn = nn.Linear(n_embed, 3 * n_embed)
         self.c_proj = nn.Linear(n_embed, n_embed)
         self.n_head = n_head
-        self.n_embd = n_embed
 
     def forward(self, x):
         B, T, C = x.size()
         qkv = self.c_attn(x)
-        q, k, v = qkv.split(self.n_embd, dim=2)
+        q, k, v = qkv.split(n_embed, dim=2)
         k = k.view(B, T, self.n_head, C // self.n_head).transpose(1, 2)
         q = q.view(B, T, self.n_head, C // self.n_head).transpose(1, 2)
         v = v.view(B, T, self.n_head, C // self.n_head).transpose(1, 2)

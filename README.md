@@ -3,9 +3,13 @@
 This is a simple experiment to extract the dimensions of components from the part description.
 In the context of supply chain and manufacturing, there are often procurement data without sufficient metadata to each of the components.
 
+[Medium Article](https://medium.com/@nevinbaiju_77488/llms-for-data-extraction-ad3d492c439b)
+
 ### Acknowledgment
 
 I would like to acknowledge [@karpathy](https://github.com/karpathy/) for being an amazing human being and providing high quality education about deep learning and LLM's. So most of the Transformer's code is inspired from [this repo](https://github.com/karpathy/build-nanogpt).
+
+### The problem
 
 For example, properties like dimension, would be available but they will be buried in the part description as follows:
 
